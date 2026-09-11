@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using server.Data;
 using server.Domain;
 using server.Domain.Models;
 namespace server.Controllers
@@ -9,28 +11,14 @@ namespace server.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly AppDbContext _context;
-
-        public ProductController(AppDbContext context)
+        public ProductController()
         {
-            _context = context;
-        }
-
-        [HttpPost]
-        public async Task<IResult> Create([FromBody] Product productRequest)
-        {
-            if (productRequest == null || productRequest.Title == null || productRequest.Price == null) return Results.BadRequest();
-
-            _context.Products.Add(productRequest);
-            await _context.SaveChangesAsync();
-
-            return Results.Ok();
         }
 
         [HttpGet]
-        public async Task<List<Product>> GetAll()
+        public async Task<ActionResult<Product[]>> GetByPage()
         {
-            return await _context.Products.ToListAsync();
+            return Placeholders.Items;
         }
     }
 }

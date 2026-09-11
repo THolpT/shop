@@ -13,8 +13,17 @@ namespace server
             builder.Services.AddAuthorization();
             builder.Services.AddControllers();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+            
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("NextJs", policy =>
+                {
+                    policy
+                        .WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
 
             var app = builder.Build();
 
@@ -25,8 +34,11 @@ namespace server
             }
 
             app.UseHttpsRedirection();
+            
+            app.UseCors("NextJs");
 
             app.UseAuthorization();
+
             app.MapControllers();
 
             app.Run();

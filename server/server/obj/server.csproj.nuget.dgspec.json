@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Studio 2010\\gurtenko\\server\\server\\server.csproj": {}
+    "E:\\Project\\shop\\server\\server\\server.csproj": {}
   },
   "projects": {
-    "D:\\Visual Studio 2010\\gurtenko\\server\\server\\server.csproj": {
+    "E:\\Project\\shop\\server\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio 2010\\gurtenko\\server\\server\\server.csproj",
+        "projectUniqueName": "E:\\Project\\shop\\server\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "D:\\Visual Studio 2010\\gurtenko\\server\\server\\server.csproj",
-        "packagesPath": "C:\\Users\\unity\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio 2010\\gurtenko\\server\\server\\obj\\",
+        "projectPath": "E:\\Project\\shop\\server\\server\\server.csproj",
+        "packagesPath": "C:\\Users\\GMAnt\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\shop\\server\\server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\unity\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GMAnt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -103,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
